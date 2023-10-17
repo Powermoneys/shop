@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  .header__logo img {
+    width: 100px;
+  }
+  
+  .header__nav__list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .header__nav__item {
+    margin-left: 20px;
+  }
+  
+  .header__nav__item a {
+    text-decoration: none;
+    color: #333;
+  }

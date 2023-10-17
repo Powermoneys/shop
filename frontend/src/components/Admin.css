@@ -1,0 +1,66 @@
+.admin {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .admin h1 {
+    text-align: center;
+  }
+  
+  .admin p {
+    color: red;
+  }
+  
+  .admin__form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin__form label {
+    margin-top: 10px;
+  }
+  
+  .admin__form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .admin__form button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: green;
+    color: white;
+  }
+  
+  .admin__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .admin__item {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .admin__item img {
+    width: 100%;
+  }
+  
+  .admin__item h3, p, button {
+    margin: 10px 0;
+  }
+  
+  .admin__item button:nth-child(4) {
+    background-color: blue;
+    color: white;
+  }
+  
+  .admin__item button:nth-child(5) {
+    background-color: red;
+    color: white;
+  }
+  
