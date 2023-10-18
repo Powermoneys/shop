@@ -270,6 +270,10 @@ app.get('/items', async (req, res) => {
   }
 });
 
+app.use("/", (req, res) => {
+  res.send('welcome to the main server')
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
