@@ -270,8 +270,8 @@ app.get('/items', async (req, res) => {
   }
 });
 
-app.use("/", (req, res) => {
-  res.send('welcome to the main server')
+app.get("/", (req, res) => {
+  res.send("Hello, World!");
 });
 
 app.listen(port, () => {
