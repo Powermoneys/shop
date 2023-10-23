@@ -12,7 +12,7 @@ function Admin() {
   useEffect(() => {
     // Получение данных о товарах с backend
     axios
-      .get('http://localhost:5000/items', {
+      .get(`${process.env.REACT_APP_SERVER_URL}items`, {
         headers: {
           authorization: localStorage.getItem('token'), // Передача токена в заголовке запроса
         },
@@ -29,7 +29,7 @@ function Admin() {
     // Обработка добавления товара
     axios
       .post(
-        'http://localhost:5000/items',
+        `${process.env.REACT_APP_SERVER_URL}items`,
         {
           productname,
           price,
@@ -54,7 +54,7 @@ function Admin() {
     // Обработка изменения товара
     axios
       .put(
-        `http://localhost:5000/items/${id}`,
+        `${process.env.REACT_APP_SERVER_URL}items/${id}`,
         {
           productname,
           price,
@@ -82,7 +82,7 @@ function Admin() {
   const handleDeleteItem = (id) => {
     // Обработка удаления товара
     axios
-      .delete(`http://localhost:5000/items/${id}`, {
+      .delete(`${process.env.REACT_APP_SERVER_URL}items/${id}`, {
         headers: {
           authorization: localStorage.getItem('token'), // Передача токена в заголовке запроса
         },

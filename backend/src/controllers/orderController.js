@@ -1,11 +1,10 @@
-// Импорт модулей
 const Order = require('../models/order');
 const { authenticate } = require('../middlewares/auth');
 
 // Создание контроллера
 const orderController = {};
 
-// Действие для создания заказа
+// Создание заказа
 orderController.createOrder = async (req, res) => {
   try {
     const { totalPrice, items, username } = req.body;
@@ -35,5 +34,4 @@ orderController.createOrder = async (req, res) => {
   }
 };
 
-// Экспорт контроллера
 module.exports = orderController;

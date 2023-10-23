@@ -12,7 +12,7 @@ function Auth() {
   const handleRegister = () => {
     // Обработка регистрации пользователя
     axios
-      .post('http://localhost:5000/register', {
+      .post(`${process.env.REACT_APP_SERVER_URL}users/create`, {
         username,
         email,
         password,
@@ -29,7 +29,7 @@ function Auth() {
   const handleLogin = () => {
     // Обработка входа пользователя
     axios
-      .post('http://localhost:5000/login', {
+      .post(`${process.env.REACT_APP_SERVER_URL}users/login`, {
         username,
         password,
       })

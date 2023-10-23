@@ -1,4 +1,3 @@
-// Импорт модулей
 const Item = require('../models/item');
 const { authenticate, authorize } = require('../middlewares/auth');
 
@@ -29,7 +28,7 @@ itemController.createItem = async (req, res) => {
   }
 };
 
-// Действие для обновления товара
+// Обновление товара
 itemController.updateItem = async (req, res) => {
   try {
     const id = req.params.id;
@@ -60,7 +59,7 @@ itemController.updateItem = async (req, res) => {
   }
 };
 
-// Действие для удаления товара
+// Удаление товара
 itemController.deleteItem = async (req, res) => {
   try {
     const id = req.params.id;
@@ -77,7 +76,7 @@ itemController.deleteItem = async (req, res) => {
   }
 };
 
-// Действие для получения списка товаров
+// Получение списка товаров
 itemController.listItems = async (req, res) => {
   try {
     // Выполнение запроса SELECT для получения всех товаров из базы данных
@@ -90,5 +89,4 @@ itemController.listItems = async (req, res) => {
   }
 };
 
-// Экспорт контроллера
 module.exports = itemController;

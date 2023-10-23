@@ -1,4 +1,3 @@
-// Импорт модулей
 const jwt = require('jsonwebtoken');
 
 // Функция для проверки аутентификации пользователя по токену
@@ -25,5 +24,4 @@ const authorize = (req, res, next) => {
   next();
 };
 
-// Экспорт функций
 module.exports = { authenticate, authorize };

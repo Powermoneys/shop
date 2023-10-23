@@ -1,4 +1,3 @@
-// routes/itemRouter.js
 const express = require('express');
 const itemController = require('../controllers/itemController');
 
@@ -11,5 +10,4 @@ itemRouter.put('/:id', itemController.updateItem);
 itemRouter.delete('/:id', itemController.deleteItem);
 itemRouter.get('/', itemController.listItems);
 
-// Экспорт роутера
 module.exports = itemRouter;

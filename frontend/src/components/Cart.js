@@ -45,7 +45,7 @@ function Cart() {
         body: JSON.stringify(order),
       };
 
-      fetch('http://localhost:5000/order', requestOptions)
+      fetch(`${process.env.REACT_APP_SERVER_URL}order`, requestOptions)
         .then((response) => {
           if (response.ok) {
             alert('Order added successfully');
