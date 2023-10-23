@@ -1,5 +1,4 @@
 const Item = require('../models/item');
-const { authenticate, authorize } = require('../middlewares/auth');
 
 // Создание контроллера
 const itemController = {};

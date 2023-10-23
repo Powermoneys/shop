@@ -1,5 +1,4 @@
 const Order = require('../models/order');
-const { authenticate } = require('../middlewares/auth');
 
 // Создание контроллера
 const orderController = {};
