@@ -5,7 +5,7 @@ const { authenticate, authorize } = require('../middlewares/auth');
 const itemController = {};
 
 // Действие для создания товара
-itemController.createItem = authenticate, authorize, async (req, res) => {
+itemController.createItem = async (req, res) => {
   try {
     const { productname, price, productimage } = req.body;
 
@@ -29,7 +29,7 @@ itemController.createItem = authenticate, authorize, async (req, res) => {
 };
 
 // Обновление товара
-itemController.updateItem = authenticate, authorize, async (req, res) => {
+itemController.updateItem = async (req, res) => {
   try {
     const id = req.params.id;
     const { productname, price, productimage } = req.body;
@@ -60,7 +60,7 @@ itemController.updateItem = authenticate, authorize, async (req, res) => {
 };
 
 // Удаление товара
-itemController.deleteItem = authenticate, authorize, async (req, res) => {
+itemController.deleteItem = async (req, res) => {
   try {
     const id = req.params.id;
 
