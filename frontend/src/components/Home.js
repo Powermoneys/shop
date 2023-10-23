@@ -9,7 +9,7 @@ function Home() {
   useEffect(() => {
     // Получение данных о товарах с backend
     axios
-      .get('${process.env.REACT_APP_SERVER_URL}items/$')
+      .get(`${process.env.REACT_APP_SERVER_URL}items`)
       .then((response) => {
         setItems(response.data);
       })
