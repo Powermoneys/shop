@@ -13,7 +13,7 @@ const itemRouter = require('./routes/itemRouter');
 const orderRouter = require('./routes/orderRouter');
 
 const app = express();
-const port = process.env.REACT_APP_PORT || 5000;
+const port = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cors());
